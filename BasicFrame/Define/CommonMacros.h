@@ -29,7 +29,7 @@
 #pragma mark - ——————— 网络状态相关 ————————
 
 //网络状态变化
-#define KNotificationNetWorkStateChange @"KNotificationNetWorkStateChange"
+//#define KNotificationNetWorkStateChange @"KNotificationNetWorkStateChange"
 
 
 #endif /* CommonMacros_h */

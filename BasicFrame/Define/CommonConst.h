@@ -6,63 +6,58 @@
 //
 #import <UIKit/UIKit.h>
 
-//邮件接收人
-UIKIT_EXTERN NSString *const kMail_cc_ToRecipients_Address;
-
 //网络状态监控地址
 UIKIT_EXTERN NSString *const kURL_Reachability__Address;
 
 // 友盟统计
-UIKIT_EXTERN NSString *const LMJThirdSDKUMConfigInstanceAppKey;
+UIKIT_EXTERN NSString *const ThirdSDKUMConfigInstanceAppKey;
 
-UIKIT_EXTERN NSString *const LMJThirdSDKUMConfigInstanceChannelId;
+UIKIT_EXTERN NSString *const ThirdSDKUMConfigInstanceChannelId;
 
 // 友盟社交
-UIKIT_EXTERN NSString *const LMJThirdSDKUMSocialAppkey;
+UIKIT_EXTERN NSString *const ThirdSDKUMSocialAppkey;
 
 // 友盟推送
-UIKIT_EXTERN NSString *const LMJThirdSDKUMessageStartWithAppkey;
+UIKIT_EXTERN NSString *const ThirdSDKUMessageStartWithAppkey;
 
 // 友盟推送
-UIKIT_EXTERN NSString *const LMJThirdSDKUMessageAppMasterSecret;
+UIKIT_EXTERN NSString *const ThirdSDKUMessageAppMasterSecret;
 
 
 // UM 微信登录
-UIKIT_EXTERN NSString *const LMJThirdSDKWeChatAppKey;
+UIKIT_EXTERN NSString *const ThirdSDKWeChatAppKey;
 
-UIKIT_EXTERN NSString *const LMJThirdSDKWeChatAppSecret;
+UIKIT_EXTERN NSString *const ThirdSDKWeChatAppSecret;
 
-UIKIT_EXTERN NSString *const LMJThirdSDKWeChatRedirectURL;
+UIKIT_EXTERN NSString *const ThirdSDKWeChatRedirectURL;
 
 
 //sina
-UIKIT_EXTERN NSString *const LMJThirdSDKSinaAppKey;
+UIKIT_EXTERN NSString *const ThirdSDKSinaAppKey;
 
-UIKIT_EXTERN NSString *const LMJThirdSDKSinaAppSecret;
+UIKIT_EXTERN NSString *const ThirdSDKSinaAppSecret;
 
-UIKIT_EXTERN NSString *const LMJThirdSDKSinaRedirectURL;
+UIKIT_EXTERN NSString *const ThirdSDKSinaRedirectURL;
 
 // UMQQ
-UIKIT_EXTERN NSString *const LMJThirdSDKQQAppKey;
+UIKIT_EXTERN NSString *const ThirdSDKQQAppKey;
 
-UIKIT_EXTERN NSString *const LMJThirdSDKQQAppSecret;
+UIKIT_EXTERN NSString *const ThirdSDKQQAppSecret;
 
-UIKIT_EXTERN NSString *const LMJThirdSDKQQRedirectURL;
-
-// 魔窗 ios 9 通用链接, 可以服务器自己做
-UIKIT_EXTERN NSString *const LMJThirdSDKMagicWindow;
-
-//百度地图
-UIKIT_EXTERN NSString *const LMJThirdSDKBaiduMapKey;
-
-// 科大讯飞
-UIKIT_EXTERN NSString *const  USER_APPID;
+UIKIT_EXTERN NSString *const ThirdSDKQQRedirectURL;
 
 // 通知
-UIKIT_EXTERN NSString *const LMJUMSocialShareSucceedNotification;
+UIKIT_EXTERN NSString *const UMSocialShareSucceedNotification;
 
 // tableviewcontroller dealloc 通知
-UIKIT_EXTERN NSString *const LMJTableViewControllerDeallocNotification;
+UIKIT_EXTERN NSString *const TableViewControllerDeallocNotification;
 
 // 服务器XMG
-UIKIT_EXTERN NSString *const LMJXMGBaseUrl;
+UIKIT_EXTERN NSString *const XMGBaseUrl;
+
+//网络状态变化
+UIKIT_EXTERN NSString *const KNotificationNetWorkStateChange;
+
+//分享成功通知
+UIKIT_EXTERN NSString *const UMSocialShareSucceedNotification;
+

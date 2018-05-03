@@ -6,8 +6,8 @@
 //
 
 #import "ShareManager.h"
-#import <UShareUI/UShareUI.h>
 #import "ZKAlertController.h"
+#import <UShareUI/UShareUI.h>
 
 @implementation ShareManager
 
@@ -20,7 +20,43 @@
     return shareManager;
 }
 
--(void)showShareView{
++ (void)UMSocialStart
+{
+    // 友盟分享
+    
+    //设置友盟appkey
+    [[UMSocialManager defaultManager] setUmSocialAppkey:ThirdSDKUMSocialAppkey];
+    
+    // 获取友盟social版本号
+    //NSLog(@"UMeng social version: %@", [UMSocialGlobal umSocialSDKVersion]);
+    
+    //设置微信的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:ThirdSDKWeChatAppKey appSecret:ThirdSDKWeChatAppSecret redirectURL:ThirdSDKWeChatRedirectURL];
+    
+    
+    //设置分享到QQ互联的appKey和appSecret
+    /* 设置分享到QQ互联的appID
+     * U-Share SDK为了兼容大部分平台命名，统一用appKey和appSecret进行参数设置，而QQ平台仅需将appID作为U-Share的appKey参数传进即可。
+     */
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:ThirdSDKQQAppKey  appSecret:ThirdSDKQQAppSecret redirectURL:ThirdSDKQQRedirectURL];
+    
+    //设置新浪的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:ThirdSDKSinaAppKey  appSecret:ThirdSDKSinaAppSecret redirectURL:ThirdSDKSinaRedirectURL];
+    
+    [UMSocialUIManager setPreDefinePlatforms:@[@(UMSocialPlatformType_Sina),@(UMSocialPlatformType_QQ),@(UMSocialPlatformType_WechatSession), @(UMSocialPlatformType_WechatTimeLine), @(UMSocialPlatformType_Qzone)]];
+    
+    // 如果不想显示平台下的某些类型，可用以下接口设置
+    //    [[UMSocialManager defaultManager] removePlatformProviderWithPlatformTypes:@[@(UMSocialPlatformType_AlipaySession),@(UMSocialPlatformType_Email),@(UMSocialPlatformType_Sms), @(UMSocialPlatformType_WechatFavorite), @(UMSocialPlatformType_TencentWb)]];
+    
+#ifdef DEBUG
+    
+    //打开调试日志
+    //[[UMSocialManager defaultManager] openLog:YES];
+    
+#endif
+}
+
+- (void)showShareView{
     //显示分享面板
     [UMSocialUIManager showShareMenuViewInWindowWithPlatformSelectionBlock:^(UMSocialPlatformType platformType, NSDictionary *userInfo) {
         // 根据获取的platformType确定所选平台进行下一步操作

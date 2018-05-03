@@ -19,4 +19,9 @@
  */
 -(void)showShareView;
 
+/**
+ 初始化第三方登录和分享
+ */
++ (void)UMSocialStart;
+
 @end

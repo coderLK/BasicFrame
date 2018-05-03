@@ -25,6 +25,7 @@
     //网络状态监听
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(netWorkStateChange:)
+     
                                                  name:KNotificationNetWorkStateChange
                                                object:nil];
 }
