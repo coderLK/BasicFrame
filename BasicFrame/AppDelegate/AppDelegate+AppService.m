@@ -6,7 +6,6 @@
 //
 
 #import "AppDelegate+AppService.h"
-#import "Header.h"
 #import "MainTabBarController.h"
 #import "UserManager.h"
 #import "RootNavigationController.h"

@@ -10,7 +10,6 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import "AESHelper.h"
 #import "HeaderModel.h"
-#import "Header.h"
 #import "FileManager.h"
 
 @implementation NetworkHelper

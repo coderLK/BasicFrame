@@ -6,7 +6,6 @@
 //
 
 #import "RootTableViewController.h"
-#import "Header.h"
 
 @interface RootTableViewController ()
 

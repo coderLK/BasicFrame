@@ -7,7 +7,6 @@
 
 #import "MainTabBarController.h"
 #import "RootNavigationController.h"
-#import "Header.h"
 
 @interface MainTabBarController ()
 

@@ -13,6 +13,7 @@
 		9E6224CC209ABD79000E6AEA /* ShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6224CB209ABD79000E6AEA /* ShareManager.m */; };
 		9E6224D3209ABFCB000E6AEA /* BaseRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6224D2209ABFCB000E6AEA /* BaseRequestAPI.m */; };
 		9E6224DA209AE72B000E6AEA /* ZKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6224D9209AE72B000E6AEA /* ZKAlertController.m */; };
+		9E6224DD209AFFF3000E6AEA /* CommonConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6224DC209AFFF3000E6AEA /* CommonConst.m */; };
 		9E80080620945C0700639252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E80080520945C0700639252 /* AppDelegate.m */; };
 		9E80080920945C0700639252 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E80080820945C0700639252 /* ViewController.m */; };
 		9E80080C20945C0700639252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E80080A20945C0700639252 /* Main.storyboard */; };
@@ -58,6 +59,9 @@
 		9E6224D2209ABFCB000E6AEA /* BaseRequestAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRequestAPI.m; sourceTree = "<group>"; };
 		9E6224D8209AE72B000E6AEA /* ZKAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKAlertController.h; sourceTree = "<group>"; };
 		9E6224D9209AE72B000E6AEA /* ZKAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKAlertController.m; sourceTree = "<group>"; };
+		9E6224DB209AFFF3000E6AEA /* CommonConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonConst.h; sourceTree = "<group>"; };
+		9E6224DC209AFFF3000E6AEA /* CommonConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonConst.m; sourceTree = "<group>"; };
+		9E6224DE209B0109000E6AEA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9E80080120945C0700639252 /* BasicFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E80080420945C0700639252 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E80080520945C0700639252 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,7 +86,6 @@
 		9E864CB420995CC900D54CA5 /* URLMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMacros.h; sourceTree = "<group>"; };
 		9E864CB520995F4600D54CA5 /* FontAndColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontAndColorMacros.h; sourceTree = "<group>"; };
 		9E864CB620995FBF00D54CA5 /* ThirdMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdMacros.h; sourceTree = "<group>"; };
-		9E864CBB2099675400D54CA5 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		9E864CBD209990AE00D54CA5 /* RootNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
 		9E864CBE209990AF00D54CA5 /* RootNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 		9E864CC12099957800D54CA5 /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 				9E80080D20945C0700639252 /* Assets.xcassets */,
 				9E80081220945C0700639252 /* Info.plist */,
 				9E80081320945C0700639252 /* main.m */,
+				9E6224DE209B0109000E6AEA /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -257,7 +261,8 @@
 				9E864CB520995F4600D54CA5 /* FontAndColorMacros.h */,
 				9E864CB620995FBF00D54CA5 /* ThirdMacros.h */,
 				9E864CCC2099A9EA00D54CA5 /* CommonMacros.h */,
-				9E864CBB2099675400D54CA5 /* Header.h */,
+				9E6224DB209AFFF3000E6AEA /* CommonConst.h */,
+				9E6224DC209AFFF3000E6AEA /* CommonConst.m */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 				9E864CBF209990AF00D54CA5 /* RootNavigationController.m in Sources */,
 				9E80081420945C0700639252 /* main.m in Sources */,
 				9E864CC32099957800D54CA5 /* MainTabBarController.m in Sources */,
+				9E6224DD209AFFF3000E6AEA /* CommonConst.m in Sources */,
 				9E80083120946E2200639252 /* UserInfo.m in Sources */,
 				9E864CC620999BB100D54CA5 /* RootTableViewController.m in Sources */,
 				9E864CFC2099C5B900D54CA5 /* LoginViewController.m in Sources */,
@@ -826,7 +832,7 @@
 					"$(PROJECT_DIR)/BasicFrame/ThirdParty/UMSocial/UMSocialUI",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BasicFrame/PrefixHeader.pch";
 				INFOPLIST_FILE = BasicFrame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -853,7 +859,7 @@
 					"$(PROJECT_DIR)/BasicFrame/ThirdParty/UMSocial/UMSocialUI",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BasicFrame/PrefixHeader.pch";
 				INFOPLIST_FILE = BasicFrame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

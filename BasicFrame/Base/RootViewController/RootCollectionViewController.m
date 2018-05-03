@@ -6,7 +6,6 @@
 //
 
 #import "RootCollectionViewController.h"
-#import "Header.h"
 
 @interface RootCollectionViewController ()
 

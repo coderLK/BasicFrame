@@ -7,7 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 typedef void (^loginBlock)(BOOL success, NSString * des);
 
 /**

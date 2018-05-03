@@ -1,12 +1,12 @@
 //
-//  Header.h
+//  PrefixHeader.pch
 //  BasicFrame
 //
-//  Created by zkingsoft on 2018/5/2.
+//  Created by zkingsoft on 2018/5/3.
 //
 
-#ifndef Header_h
-#define Header_h
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
 
 //全局宏
 #import "UtilsMacros.h"
@@ -16,17 +16,8 @@
 #import "CommonMacros.h"
 
 //基础类
-//#import "AppDelegate.h"
-//#import "AppDelegate+AppService.h"
-//#import "RootViewController.h"
-//#import "RootNavigationController.h"
 #import "MBProgressHUD+ZK.h"
 #import "NetworkHelper.h"
-//#import "AppManager.h"
-//#import "ShareManager.h"
-//#import "UserManager.h"
-//#import "IMManager.h"
-//#import "UIButton+XYButton.h"
 
 //第三方
 #import <YYKit.h>
@@ -35,4 +26,4 @@
 #import <YTKNetwork.h>
 #import <MBProgressHUD.h>
 
-#endif /* Header_h */
+#endif /* PrefixHeader_pch */

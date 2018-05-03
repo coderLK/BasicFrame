@@ -6,7 +6,6 @@
 //
 
 #import "NetworkCache.h"
-#import "Header.h"
 
 @implementation NetworkCache
 

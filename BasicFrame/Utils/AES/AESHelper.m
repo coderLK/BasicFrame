@@ -7,7 +7,6 @@
 
 #import "AESHelper.h"
 #import <CommonCrypto/CommonCryptor.h>
-#import "Header.h"
 
 #define kPwd @"0102030405060708"
 NSString const *kInitVector = kPwd;

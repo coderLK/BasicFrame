@@ -6,7 +6,6 @@
 //
 
 #import "FileManager.h"
-#import "Header.h"
 
 static NSString *const CachesPath = @"Download";
 

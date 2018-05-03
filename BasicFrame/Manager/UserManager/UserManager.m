@@ -8,7 +8,6 @@
 #import "UserManager.h"
 #import <UMSocialCore/UMSocialCore.h>
 #import "MBProgressHUD+ZK.h"
-#import "Header.h"
 #import "IMManager.h"
 
 @implementation UserManager

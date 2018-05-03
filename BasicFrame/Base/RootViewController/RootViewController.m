@@ -6,7 +6,6 @@
 //
 
 #import "RootViewController.h"
-#import "Header.h"
 
 @interface RootViewController ()
 

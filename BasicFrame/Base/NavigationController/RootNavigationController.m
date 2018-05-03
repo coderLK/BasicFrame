@@ -6,7 +6,6 @@
 //
 
 #import "RootNavigationController.h"
-#import "Header.h"
 
 @interface RootNavigationController ()
 

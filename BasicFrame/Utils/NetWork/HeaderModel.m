@@ -6,7 +6,6 @@
 //
 
 #import "HeaderModel.h"
-#import "Header.h"
 
 @implementation HeaderModel
 

@@ -8,7 +8,6 @@
 #import "BaseRequestAPI.h"
 #import "HeaderModel.h"
 #import "AESHelper.h"
-#import "Header.h"
 
 @implementation BaseRequestAPI
 
