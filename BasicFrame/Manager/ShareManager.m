@@ -51,7 +51,7 @@
 #ifdef DEBUG
     
     //打开调试日志
-    //[[UMSocialManager defaultManager] openLog:YES];
+    [[UMSocialManager defaultManager] openLog:YES];
     
 #endif
 }

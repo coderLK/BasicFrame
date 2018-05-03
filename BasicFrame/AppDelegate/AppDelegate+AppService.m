@@ -11,6 +11,7 @@
 #import "RootNavigationController.h"
 #import <UMSocialCore/UMSocialCore.h>
 #import "LoginViewController.h"
+#import "ShareManager.h"
 
 @implementation AppDelegate (AppService)
 
@@ -37,13 +38,13 @@
     [self.window makeKeyAndVisible];
 }
 
-#pragma mark ————— 初始化网络配置 —————
+#pragma mark - 初始化网络配置
 -(void)NetWorkConfig{
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
     config.baseUrl = URL_server;
 }
 
-#pragma mark ————— 初始化用户系统 —————
+#pragma mark - 初始化用户系统
 -(void)initUserManager{
     //DLog(@"设备IMEI ：%@",[OpenUDID value]);
     if([[UserManager sharedManager] loadUserInfo]){
@@ -70,7 +71,7 @@
     }
 }
 
-#pragma mark ————— 登录状态处理 —————
+#pragma mark - 登录状态处理 —————
 - (void)loginStateChange:(NSNotification *)notification
 {
     BOOL loginSuccess = [notification.object boolValue];
@@ -111,7 +112,7 @@
     //[AppManager showFPS];
 }
 
-#pragma mark ————— 网络状态变化 —————
+#pragma mark - 网络状态变化 —————
 - (void)netWorkStateChange:(NSNotification *)notification
 {
     BOOL isNetWork = [notification.object boolValue];
@@ -135,29 +136,9 @@
 }
 
 
-#pragma mark ————— 友盟 初始化 —————
--(void)initUMeng{
-    /* 打开调试日志 */
-    [[UMSocialManager defaultManager] openLog:YES];
-    
-    /* 设置友盟appkey */
-    [[UMSocialManager defaultManager] setUmSocialAppkey:UMengKey];
-    
-    [self configUSharePlatforms];
-}
-#pragma mark ————— 配置第三方 —————
--(void)configUSharePlatforms{
-    /* 设置微信的appKey和appSecret */
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:kAppKey_Wechat appSecret:kSecret_Wechat redirectURL:nil];
-    /*
-     * 移除相应平台的分享，如微信收藏
-     */
-    //[[UMSocialManager defaultManager] removePlatformProviderWithPlatformTypes:@[@(UMSocialPlatformType_WechatFavorite)]];
-    
-    /* 设置分享到QQ互联的appID
-     * U-Share SDK为了兼容大部分平台命名，统一用appKey和appSecret进行参数设置，而QQ平台仅需将appID作为U-Share的appKey参数传进即可。
-     */
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:kAppKey_Tencent/*设置QQ平台的appID*/  appSecret:nil redirectURL:nil];
+#pragma mark - 友盟 初始化
+-(void)initUMeng {
+    [ShareManager UMSocialStart];
 }
 
 #pragma mark ————— OpenURL 回调 —————
