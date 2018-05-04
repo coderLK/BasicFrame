@@ -116,6 +116,34 @@ static NSString *const CachesPath = @"Download";
     return NO;
 }
 
+#pragma mark - 存储文件
+
+/**
+ 字典存储
+
+ @param dic 字典
+ @param fileName 文件名
+ */
+- (void)saveDicToFile:(NSDictionary *)dic withFileName:(NSString *)fileName {
+    NSLog(@"开始存储文件大小");
+    NSString *caches = [FileManager createFile:fileName];
+    [dic writeToFile:caches atomically:YES];
+}
+
+#pragma mark - 读取字典
+
+/**
+ 字典读取
+ @param path path
+ @return 字典
+ */
+- (NSDictionary *)getCacheDicFromPath:(NSString *)path {
+    NSString *cachePath = [FileManager createFile:path];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSDictionary *cacheDic = [manager attributesOfItemAtPath:cachePath error:nil];
+    return cacheDic;
+}
+
 #pragma mark 清空缓存方法
 + (void)cleanCaches:(NSString *)path
 {

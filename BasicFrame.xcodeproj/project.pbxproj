@@ -14,6 +14,9 @@
 		9E6224D3209ABFCB000E6AEA /* BaseRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6224D2209ABFCB000E6AEA /* BaseRequestAPI.m */; };
 		9E6224DA209AE72B000E6AEA /* ZKAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6224D9209AE72B000E6AEA /* ZKAlertController.m */; };
 		9E6224DD209AFFF3000E6AEA /* CommonConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6224DC209AFFF3000E6AEA /* CommonConst.m */; };
+		9E6F9669209BEFF00033529E /* FileDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F9668209BEFF00033529E /* FileDownloadManager.m */; };
+		9E6F966D209BFD910033529E /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F966C209BFD910033529E /* SQLiteManager.m */; };
+		9E6F9670209BFE490033529E /* SQLiteDAL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E6F966F209BFE490033529E /* SQLiteDAL.m */; };
 		9E80080620945C0700639252 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E80080520945C0700639252 /* AppDelegate.m */; };
 		9E80080920945C0700639252 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E80080820945C0700639252 /* ViewController.m */; };
 		9E80080C20945C0700639252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E80080A20945C0700639252 /* Main.storyboard */; };
@@ -62,6 +65,12 @@
 		9E6224DB209AFFF3000E6AEA /* CommonConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonConst.h; sourceTree = "<group>"; };
 		9E6224DC209AFFF3000E6AEA /* CommonConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonConst.m; sourceTree = "<group>"; };
 		9E6224DE209B0109000E6AEA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9E6F9667209BEFF00033529E /* FileDownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileDownloadManager.h; sourceTree = "<group>"; };
+		9E6F9668209BEFF00033529E /* FileDownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileDownloadManager.m; sourceTree = "<group>"; };
+		9E6F966B209BFD910033529E /* SQLiteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		9E6F966C209BFD910033529E /* SQLiteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
+		9E6F966E209BFE490033529E /* SQLiteDAL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteDAL.h; sourceTree = "<group>"; };
+		9E6F966F209BFE490033529E /* SQLiteDAL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLiteDAL.m; sourceTree = "<group>"; };
 		9E80080120945C0700639252 /* BasicFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E80080420945C0700639252 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E80080520945C0700639252 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -167,6 +176,8 @@
 			children = (
 				9E6224C7209AB76D000E6AEA /* FileManager.h */,
 				9E6224C8209AB76D000E6AEA /* FileManager.m */,
+				9E6F9667209BEFF00033529E /* FileDownloadManager.h */,
+				9E6F9668209BEFF00033529E /* FileDownloadManager.m */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -187,6 +198,17 @@
 				9E6224D9209AE72B000E6AEA /* ZKAlertController.m */,
 			);
 			path = AlterVC;
+			sourceTree = "<group>";
+		};
+		9E6F966A209BFC940033529E /* SQLiteManager */ = {
+			isa = PBXGroup;
+			children = (
+				9E6F966B209BFD910033529E /* SQLiteManager.h */,
+				9E6F966C209BFD910033529E /* SQLiteManager.m */,
+				9E6F966E209BFE490033529E /* SQLiteDAL.h */,
+				9E6F966F209BFE490033529E /* SQLiteDAL.m */,
+			);
+			path = SQLiteManager;
 			sourceTree = "<group>";
 		};
 		9E8007F820945C0700639252 = {
@@ -302,6 +324,7 @@
 		9E80082220946BDA00639252 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				9E6F966A209BFC940033529E /* SQLiteManager */,
 				9E6224C6209AAB47000E6AEA /* FileManager */,
 				9E80082E20946DF800639252 /* UserManager */,
 				9E6224C2209AA2CF000E6AEA /* IMManager.h */,
@@ -675,9 +698,11 @@
 				9E864CF02099BC4300D54CA5 /* NetworkCache.m in Sources */,
 				9E864CB22099471600D54CA5 /* RootViewController.m in Sources */,
 				9E80080920945C0700639252 /* ViewController.m in Sources */,
+				9E6F9670209BFE490033529E /* SQLiteDAL.m in Sources */,
 				9E864CED2099BB9700D54CA5 /* NetworkHelper.m in Sources */,
 				9E864CC92099A30600D54CA5 /* RootCollectionViewController.m in Sources */,
 				9E6224C4209AA2CF000E6AEA /* IMManager.m in Sources */,
+				9E6F966D209BFD910033529E /* SQLiteManager.m in Sources */,
 				9E6224DA209AE72B000E6AEA /* ZKAlertController.m in Sources */,
 				9E864CE92099B30300D54CA5 /* MBProgressHUD+ZK.m in Sources */,
 				9E864CBF209990AF00D54CA5 /* RootNavigationController.m in Sources */,
@@ -685,6 +710,7 @@
 				9E864CC32099957800D54CA5 /* MainTabBarController.m in Sources */,
 				9E6224DD209AFFF3000E6AEA /* CommonConst.m in Sources */,
 				9E80083120946E2200639252 /* UserInfo.m in Sources */,
+				9E6F9669209BEFF00033529E /* FileDownloadManager.m in Sources */,
 				9E864CC620999BB100D54CA5 /* RootTableViewController.m in Sources */,
 				9E864CFC2099C5B900D54CA5 /* LoginViewController.m in Sources */,
 				9E80083420946E3400639252 /* UserManager.m in Sources */,

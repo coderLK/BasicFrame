@@ -15,7 +15,7 @@
 
 @implementation AppDelegate (AppService)
 
-#pragma mark ————— 初始化服务 —————
+#pragma mark - 初始化服务
 -(void)initService{
     //注册登录状态监听
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -31,7 +31,7 @@
                                                object:nil];
 }
 
-#pragma mark ————— 初始化window —————
+#pragma mark — 初始化window
 -(void)initWindow {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = kWhiteColor;
@@ -71,7 +71,7 @@
     }
 }
 
-#pragma mark - 登录状态处理 —————
+#pragma mark - 登录状态处理
 - (void)loginStateChange:(NSNotification *)notification
 {
     BOOL loginSuccess = [notification.object boolValue];
@@ -112,7 +112,7 @@
     //[AppManager showFPS];
 }
 
-#pragma mark - 网络状态变化 —————
+#pragma mark - 网络状态变化
 - (void)netWorkStateChange:(NSNotification *)notification
 {
     BOOL isNetWork = [notification.object boolValue];
@@ -141,7 +141,7 @@
     [ShareManager UMSocialStart];
 }
 
-#pragma mark ————— OpenURL 回调 —————
+#pragma mark — OpenURL 回调
 // 支持所有iOS系统。注：此方法是老方法，建议同时实现 application:openURL:options: 若APP不支持iOS9以下，可直接废弃当前，直接使用application:openURL:options:
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
@@ -176,7 +176,7 @@
     return result;
 }
 
-#pragma mark ————— 网络状态监听 —————
+#pragma mark — 网络状态监听
 - (void)monitorNetworkStatus
 {
     // 网络状态改变一次, networkStatusWithBlock就会响应一次
